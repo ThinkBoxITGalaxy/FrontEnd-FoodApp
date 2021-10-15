@@ -14,9 +14,6 @@ namespace Justeat_replica
     }
     public class LoginUser
     {
-        public static string username = string.Empty;
-        public static string password = string.Empty;
-
         public static List<UserClass> UserData(string un, string pw)
         {
             SqlDataReader users = Query.GlobalDataReader("select * from users");

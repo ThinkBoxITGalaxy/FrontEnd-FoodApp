@@ -28,9 +28,6 @@ namespace Justeat_replica
         {
             LoadRestaurant();
             HomePageImage();
-
-          
-            //panel2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
         public void HomePageImage()
         {
