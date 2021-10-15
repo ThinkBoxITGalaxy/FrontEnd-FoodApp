@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.homepagepb = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.RestaurantsPnl = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.homepagepb = new System.Windows.Forms.PictureBox();
+            this.NoUserLbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.homepagepb)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.homepagepb)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -52,6 +53,14 @@
             this.panel1.Size = new System.Drawing.Size(1214, 761);
             this.panel1.TabIndex = 3;
             // 
+            // RestaurantsPnl
+            // 
+            this.RestaurantsPnl.AutoSize = true;
+            this.RestaurantsPnl.Location = new System.Drawing.Point(46, 241);
+            this.RestaurantsPnl.Name = "RestaurantsPnl";
+            this.RestaurantsPnl.Size = new System.Drawing.Size(1115, 100);
+            this.RestaurantsPnl.TabIndex = 11;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -66,6 +75,16 @@
             this.label1.Text = "Login";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.NoUserLbl);
+            this.panel2.Controls.Add(this.homepagepb);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1214, 366);
+            this.panel2.TabIndex = 10;
+            // 
             // homepagepb
             // 
             this.homepagepb.BackColor = System.Drawing.Color.Transparent;
@@ -77,22 +96,18 @@
             this.homepagepb.TabIndex = 7;
             this.homepagepb.TabStop = false;
             // 
-            // panel2
+            // NoUserLbl
             // 
-            this.panel2.Controls.Add(this.homepagepb);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1214, 366);
-            this.panel2.TabIndex = 10;
-            // 
-            // RestaurantsPnl
-            // 
-            this.RestaurantsPnl.AutoSize = true;
-            this.RestaurantsPnl.Location = new System.Drawing.Point(46, 241);
-            this.RestaurantsPnl.Name = "RestaurantsPnl";
-            this.RestaurantsPnl.Size = new System.Drawing.Size(1115, 100);
-            this.RestaurantsPnl.TabIndex = 11;
+            this.NoUserLbl.AutoSize = true;
+            this.NoUserLbl.BackColor = System.Drawing.Color.Transparent;
+            this.NoUserLbl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NoUserLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NoUserLbl.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.NoUserLbl.Location = new System.Drawing.Point(42, 29);
+            this.NoUserLbl.Name = "NoUserLbl";
+            this.NoUserLbl.Size = new System.Drawing.Size(64, 24);
+            this.NoUserLbl.TabIndex = 12;
+            this.NoUserLbl.Text = "asdsa";
             // 
             // RestaurantForm
             // 
@@ -107,12 +122,14 @@
             this.Name = "RestaurantForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RestaurantForm";
+            this.Activated += new System.EventHandler(this.RestaurantForm_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RestaurantForm_FormClosed);
             this.Load += new System.EventHandler(this.RestaurantForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.homepagepb)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.homepagepb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,5 +141,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel RestaurantsPnl;
+        private System.Windows.Forms.Label NoUserLbl;
     }
 }

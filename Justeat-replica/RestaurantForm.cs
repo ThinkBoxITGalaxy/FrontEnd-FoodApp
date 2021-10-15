@@ -21,11 +21,15 @@ namespace Justeat_replica
             InitializeComponent();
             label1.Parent = homepagepb;
             label1.BackColor = Color.Transparent;
+            NoUserLbl.Parent = homepagepb;
+            NoUserLbl.BackColor = Color.Transparent;
         }
         private void RestaurantForm_Load(object sender, EventArgs e)
         {
             LoadRestaurant();
             HomePageImage();
+
+          
             //panel2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
         public void HomePageImage()
@@ -175,6 +179,11 @@ namespace Justeat_replica
         {
             LoginForm lf = new LoginForm();
             lf.ShowDialog();
+        }
+        public static string user = string.Empty;
+        private void RestaurantForm_Activated(object sender, EventArgs e)
+        {
+            NoUserLbl.Text = user;
         }
     }
 }

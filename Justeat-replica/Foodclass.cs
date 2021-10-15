@@ -28,11 +28,6 @@ namespace Justeat_replica
         public string foodacc_name { get; set; }
         public int foodacc_quantity { get; set; }
     }
-    public class ctrls
-    {
-        public string name_lbl { get; set; }
-        public string quantity_lbl { get; set; }
-    }
     public class OptionGroup
     {
         public int food_id { get; set; }
